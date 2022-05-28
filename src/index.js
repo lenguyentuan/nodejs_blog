@@ -8,6 +8,8 @@ const port = 3000
 //middleware
 app.use(morgan('combined'))
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.engine('hbs', engine({
   extname: '.hbs'
 }));
